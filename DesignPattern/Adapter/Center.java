@@ -1,8 +1,8 @@
-package Adapter;
+package DesignPattern.Adapter;
 
 
 /**
- * 适配器模式(Adapter)
+ * 适配器模式(DesignPattern.Adapter)
  * 中锋
  */
 // 听不懂 要用翻译

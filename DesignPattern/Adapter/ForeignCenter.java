@@ -1,7 +1,7 @@
-package Adapter;
+package DesignPattern.Adapter;
 
 /**
- * 适配器模式(Adapter)
+ * 适配器模式(DesignPattern.Adapter)
  * 外籍中锋
  */
 public class ForeignCenter {

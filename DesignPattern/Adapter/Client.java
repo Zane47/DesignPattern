@@ -1,4 +1,4 @@
-package Adapter;
+package DesignPattern.Adapter;
 
 public class Client {
 
