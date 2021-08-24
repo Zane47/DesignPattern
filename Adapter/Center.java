@@ -5,6 +5,7 @@ package Adapter;
  * 适配器模式(Adapter)
  * 中锋
  */
+// 听不懂 要用翻译
 public class Center extends AbstractPlayer {
 
     public Center(String name) {
