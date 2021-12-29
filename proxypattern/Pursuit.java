@@ -1,4 +1,4 @@
-package DesignPattern.ProxyPattern;
+package DesignPattern.proxypattern;
 
 // 追求者类
 // 让追求者类去实现“送礼物”的接口

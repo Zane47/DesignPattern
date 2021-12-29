@@ -1,4 +1,4 @@
-package DesignPattern.Adapter;
+package DesignPattern.adapter;
 
 /**
  * 适配器模式(DesignPattern.Adapter)

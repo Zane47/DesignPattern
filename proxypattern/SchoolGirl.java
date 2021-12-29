@@ -1,4 +1,4 @@
-package DesignPattern.ProxyPattern;
+package DesignPattern.proxypattern;
 
 // 被追求者类
 public class SchoolGirl {

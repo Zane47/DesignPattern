@@ -1,6 +1,5 @@
-package DesignPattern.ProxyPattern;
+package DesignPattern.proxypattern;
 
-import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Demo {

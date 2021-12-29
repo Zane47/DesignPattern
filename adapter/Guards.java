@@ -1,4 +1,4 @@
-package DesignPattern.Adapter;
+package DesignPattern.adapter;
 
 public class Guards extends AbstractPlayer {
 

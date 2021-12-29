@@ -1,4 +1,4 @@
-package DesignPattern.ProxyPattern;
+package DesignPattern.proxypattern;
 
 /**
  * 代理模式(Proxy)
