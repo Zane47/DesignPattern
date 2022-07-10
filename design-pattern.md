@@ -226,7 +226,7 @@ I18N china = I18NFactory.getI18NObject("China");
 
 
 
-![image-20220710150846654](img/design-pattern/image-20220710150846654.png)
+
 
 
 
