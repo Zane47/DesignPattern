@@ -30,4 +30,14 @@ public class Test {
         promotionActivity.executePromotionStrategy();
     }*/
 
+    /**
+     * 策略模式+工厂模式
+     */
+    public static void main(String[] args) {
+        PromotionActivity promotionActivity = null;
+        String promotionKey = "lijian";
+        PromotionStrategy promotion = PromotionStrategyFactory.getPromotion(promotionKey);
+        promotion.doPromotion();
+    }
+
 }
