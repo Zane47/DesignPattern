@@ -496,8 +496,7 @@ I18N china = I18NFactory.getI18NObject("China");
 # Ref
 
 * [imooc-Java设计模式精讲 Debug方式+内存分析](https://coding.imooc.com/class/chapter/270.html#Anchor)
-
-
+* git代码, [jinchuanchuan/Java_Knowledge_Summary](https://github.com/jinchuanchuan/Java_Knowledge_Summary)
 
 
 
