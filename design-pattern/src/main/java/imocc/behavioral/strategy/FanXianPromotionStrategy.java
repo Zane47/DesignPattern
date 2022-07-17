@@ -1,8 +1,6 @@
-package strategy;
+package imocc.behavioral.strategy;
 
-/**
- * Created by geely
- */
+
 public class FanXianPromotionStrategy implements PromotionStrategy{
     @Override
     public void doPromotion() {

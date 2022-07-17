@@ -1,4 +1,4 @@
-package strategy;
+package imocc.behavioral.strategy;
 
 public class DefaultPromotionStrategy implements PromotionStrategy {
     @Override

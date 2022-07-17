@@ -1,8 +1,6 @@
-package strategy;
+package imocc.behavioral.strategy;
 
-/**
- * Created by geely
- */
+
 public interface PromotionStrategy {
     void doPromotion();
 }

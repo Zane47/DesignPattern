@@ -1,4 +1,4 @@
-package strategy;
+package imocc.behavioral.strategy;
 
 /**
  * Created by geely

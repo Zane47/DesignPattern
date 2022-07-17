@@ -1,6 +1,5 @@
-package strategy;
+package imocc.behavioral.strategy;
 
-import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.Map;
 
