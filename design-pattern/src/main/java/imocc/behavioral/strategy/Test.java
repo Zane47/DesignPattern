@@ -1,12 +1,9 @@
 package imocc.behavioral.strategy;
 
-/**
- * Created by geely
- */
 public class Test {
 
     /**
-     * 普通方法
+     * 策略模式的初级应用
      */
     /*public static void main(String[] args) {
         PromotionActivity promotionActivity618 = new PromotionActivity(new LiJianPromotionStrategy());
@@ -34,10 +31,9 @@ public class Test {
      * 策略模式+工厂模式
      */
     public static void main(String[] args) {
-        PromotionActivity promotionActivity = null;
         String promotionKey = "lijian";
-        PromotionStrategy promotion = PromotionStrategyFactory.getPromotion(promotionKey);
-        promotion.doPromotion();
+        PromotionActivity promotionActivity = new PromotionActivity(PromotionStrategyFactory.getPromotion(promotionKey));
+        promotionActivity.executePromotionStrategy();
     }
 
 }
