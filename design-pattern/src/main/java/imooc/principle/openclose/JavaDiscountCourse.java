@@ -9,6 +9,11 @@ public class JavaDiscountCourse extends JavaCourse {
         super(id, name, price);
     }
 
+
+    public Double getOriginpPrive() {
+        return super.getPrice();
+    }
+
     public Double getDiscountPrice(){
         return super.getPrice()*0.8;
     }
