@@ -16,6 +16,8 @@
 
 ## 开闭原则
 
+-> 最重要的原则, 所有原则中的一个基础, 包括后续的设计模式
+
 ### 概念
 
 定义: 一个软件实体如类, 模块和函数应该**对扩展开放, 对修改关闭**
@@ -42,7 +44,7 @@
 
 ### coding
 
-开闭原则: 软件实现应该对扩展开放, 对修改关闭
+开闭原则: 软件实现应该**对扩展开放, 对修改关闭** 
 
 中心思想: 用抽象构建框架, 用实现扩展细节
 
@@ -52,11 +54,65 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+## 依赖倒置
+
+
+
+
+
+## 单一职责
+
+
+
+
+
+## 接口隔离
+
+
+
+
+
+## 迪米特法则
+
+
+
+
+
+## 里氏替换原则
+
+
+
+
+
+
+
+
+
+## 组合/复用原则
+
+
+
+
+
+
+
+
+
 ---
 
 3-3
 
-一句话。软件实现应该对扩展开放，对修改关闭，那为什么说它是最重要的一个原则的？因为他是所有原则中的一个基础，包括后续的设计模式，那本身呢通过设计模式可以解耦。提高软件设计我的过我的过程中呢也可以进行微重构或者呢局部重构来提高我们软件系统的扩展性，提高内聚，降低耦合，那开闭原则的中心思想就是我们要用抽象来构建框架。实现呢扩展，那这些原则呢还比较抽象，我们的课程呢就是通过coding来解决这些问题，那现在呢我们一起来学习一下开闭原则，简单呐，举几个小例子，然后呢大家在从这个过程中进行体会，那我们这个项目呢是一个空的vivo项目不会再加上下边呀创建一包。Com点激励点design principle。Ok，那这个包呢就创建好了设计原则，ok，然后我们在里边呢穿哪个包？这个报名呢？因为是开闭原则，所以呢直接用open close，中间呢就不加点了，为了保证我们所有的原则呢都在这个方下边。那这，我们参考了jk里面的源码，源码的一个命名，比如说rt点大里面有个apple，apple呢这里面有一个iQOO然后算下边呢还有一个包，就包呢这样。这个呢不用纠结，继续待在多个单词形成一个报名的时候呢，我们也采用全小写不使用通风的方式，那我们呢也会结合前面所讲的ul来提高大家的理解，首先呢我们就以不可网为例吧，首先我们创建一个类，这个类呢要靠他那是个接口，那接口呢我们最好以i开头代表呢是一个接口ok。那我们课程里边呢是有ID的这个接口啊，可以返回这个课程的ID，那课程里边呢还有课程的名字。那这个呢也是一个方法在里边呢，还有一个价格。盖price，那正常来说呢，一个课程它是一个实体，我们可以呢去写一个类，然后呢会有ID内5 Pro这三个变量，但是呢我们是为了演示还比原则，但因为开闭原则呢比较抽象一些。我们这个例子呢是相对简单的一简单，那通过后续的一套课程呢，我们会对开学原则理解更深入，那我们的课程呢有很多类型有JAVA的，有算法呢，没有前端的，所以呢我们创建一个类。想JAVA ok。直线呢靠接口。然后我们来实现解决方法，在这个时间呢比较简单。声明ID声明名字。他的价格。Ok，那我们再写一个呢，全参构造器。选择在这里边呢。Face表加上那其实在刚刚这个环境啊点儿和不加s的是一样的，那下面那也是一样返回的ID。This may。就想那现在我们有一个测试函数就这样。这个快捷键是svm，然后呢一个就可以了，以后呢我们的测试内啊都用，那我们通过接口呢来指向一个实体类JAVA扣，为什么呢？Neo加瓦克。Ok，然后我们看的这个提示，第一个ID脑的第一门课程的ID呢是96，名字呢是JAVA从零到企业级电商开发。那它的价格呢是348二元。我们最大化一下，然后呢我们直接输出，那实际我们在写项目的时候啊，out的尽量不用，确切的说这个在实际项目中呢是禁止的，那因为呀那谁他们out的里面啊是有锁的，那我们现在呢只是说个调试讲解我们设计模式。我们就不引入包了，就直接用来调试理解，这个首先呢是课程ID。改ID，然后呢课程的名称然后呢是价格Friend到单位呢就是你们说一下，现在呢我们这个课程信息呀都正常输出了，我们来看一下现在的电结，然后呢放大一下那现在的类结构图啊，非常简单，这个呢是一个接口，这个是一个类，然后这个类实现接口非常清晰，那我们一定要善用idea里边的查看工具，让我们开源码的时候啊，非常有用，那这里边的显示呢会和之前讲的标准的ul的有一点小小的差异，例如这个i就代表他没有用棒棒糖表示法，也没有用监护号，但是呢我们能看出来，那这个呢它的类型ok，那现在的那结构啊非常简单，我们呢也正常输出了这个课程的信息。那么输出完这个课程信息之后啊，那现在呢不可网有活动了，比如说双十一还是呢618要进行一个打折活动，那我们怎么来开发这个需求呢？首先呢回到我们接口，那我们是不是要增加一个钙？Discount cry每个方法呢，ok，假设我们增加了这个方法，比如说这个呢是获取课程的原价，这个呢是获取课程的打折价格，那我们这个JAVA课程的这个类呢需要进行修改了，至少我要实现这个方法ok，那假设呢现在做活动打8折。可以的我们接我们接口呢是不应该经常变化的，他应该是稳定且可靠的，否则呢接口作为契约的这个作用就是失去了，那我们再换一种思路。我这个方法呀切掉k在这里边呢也自己的对的，就这个方式来说，我们获取这个原价，那恢复，那我们为什么最开始是一个接，在这里边呢也是为了演示我们要面向接口编程，然后继续来看我们这个类，这个时候呢我们想一下，我们如果通过扩展再写一个JAVA的子类呢来试一下。文新这一个位JAVA core ok。我这段换一下，他来继承JAVA号。那这个时候呢题是错误的，意思是说了在加COS里边没有默认的不能信，因为我们在这里边的并没有一个无餐的构造器ok，但是呢那个不重要，我们还是以课程的目标为准，ok。那默认idea给他实现呐，真调用父类的构造器，这个呢没有问题，那这里边呢为什么命名JAVA啊？因为它是一个JAVA打折的课程，那如果我们这个折扣非常简单，所有类型的课程呢都统一打折。我们这个命名，不叫JAVA，直接就叫打折的一个课程即可。那这里边呢就衍生一个叫红旗m，我们来重写一个override override什么呢类的方法，那这个呢默认生成的呢是点也就是说要用户类的这个方法啊，那我们这里边呢直接乘以0.8。那如果呢我们要做分期间加jJAVA号，JAVA的折扣课程，那这里边呢？这个原价我们说一下那这个课程那这个课那这个课程价格，售卖价格啊现在直接调用该price拿到的是一折后价，但是呢我们原价没有了，那很简单，我们还是回到这个类里边，我们写一个。Price你这什么呢是是JAVA，但是它的引用了是一个iQOO，所以我们在这里边想获取原价的时候，我们试一下。点ok并没有我们之前声明的price，虽然呢他现在是ok，那我们怎么办呀？很简单，什么bug来看一下，给大家看一长短长短，ok，他名字呢还叫这个。让下边的引用啊能动。把他的改一下就可以了。那这样呢我们就抢转成功了，然后我们这里边呢课程这个呢是折扣价格。前面那我们再加一下。原价还是加盖price ok到前面的加入空格方便呢，我们查看结果。我们转一下好，这个时候呢可以看到ID有了，课程名称有了，原价有了，折后价格也有了，ok，在这里边呢在强调一下啊，我们这个课程的重点呢并不是搞定这个double就是精度的问题。对的，这一块儿忽略就可以了，那解决方案呢，前边我也说过了，ok，那么现在呢来体会一下我们刚刚的这个做法，首先接口没有变。它的实现类也没有变ok，然后呢我们声明了一个主类来继承JAVA考，我们看一下包个小一下，所以呢看到这个箭头曲线呢是实现接口实现的是继承ok，而我们这个子类的构造器是调用的父类的构造器，而下面这个呢就是方法这两个方法，一个是还有呢，返回值是double price。那我们现在的打折销售给开发完工作中都是容易引起bug的而，而我们通过继承了一个积累，简单的一个方式，使我们对于这个扩展呢是开放的，而对修改这个接口和这个鸡肋呢是关闭的，ok，论文变化的呢都是应用层的一个子模块，比如说还有呢新增了就是呗，那因为越低层次的模块儿。基础的模块变化也都也都是开病原者的一个不过这不过这个文件或者呢变的配置方式，而不是去修改spring的源码。地主是二期当中我们通过我们我们后续呢还，不断的加强巩固，那随着我们课程的学习呢，大家对这几个原则呀理解也会越来越深的，那有一些设计模式呢，会和原则有一定冲突那其实就是一个，平衡的，问题，那这个呢到后面碰到我会再详细，说的
+Com点激励点design principle。Ok，那这个包呢就创建好了设计原则，ok，然后我们在里边呢穿哪个包？这个报名呢？因为是开闭原则，所以呢直接用open close，中间呢就不加点了，为了保证我们所有的原则呢都在这个方下边。那这，我们参考了jk里面的源码，源码的一个命名，比如说rt点大里面有个apple，apple呢这里面有一个iQOO然后算下边呢还有一个包，就包呢这样。这个呢不用纠结，继续待在多个单词形成一个报名的时候呢，我们也采用全小写不使用通风的方式，那我们呢也会结合前面所讲的ul来提高大家的理解，首先呢我们就以不可网为例吧，首先我们创建一个类，这个类呢要靠他那是个接口，那接口呢我们最好以i开头代表呢是一个接口ok。那我们课程里边呢是有ID的这个接口啊，可以返回这个课程的ID，那课程里边呢还有课程的名字。那这个呢也是一个方法在里边呢，还有一个价格。盖price，那正常来说呢，一个课程它是一个实体，我们可以呢去写一个类，然后呢会有ID内5 Pro这三个变量，但是呢我们是为了演示还比原则，但因为开闭原则呢比较抽象一些。我们这个例子呢是相对简单的一简单，那通过后续的一套课程呢，我们会对开学原则理解更深入，那我们的课程呢有很多类型有JAVA的，有算法呢，没有前端的，所以呢我们创建一个类。想JAVA ok。直线呢靠接口。然后我们来实现解决方法，在这个时间呢比较简单。声明ID声明名字。他的价格。Ok，那我们再写一个呢，全参构造器。选择在这里边呢。Face表加上那其实在刚刚这个环境啊点儿和不加s的是一样的，那下面那也是一样返回的ID。This may。就想那现在我们有一个测试函数就这样。这个快捷键是svm，然后呢一个就可以了，以后呢我们的测试内啊都用，那我们通过接口呢来指向一个实体类JAVA扣，为什么呢？Neo加瓦克。Ok，然后我们看的这个提示，第一个ID脑的第一门课程的ID呢是96，名字呢是JAVA从零到企业级电商开发。那它的价格呢是348二元。我们最大化一下，然后呢我们直接输出，那实际我们在写项目的时候啊，out的尽量不用，确切的说这个在实际项目中呢是禁止的，那因为呀那谁他们out的里面啊是有锁的，那我们现在呢只是说个调试讲解我们设计模式。我们就不引入包了，就直接用来调试理解，这个首先呢是课程ID。改ID，然后呢课程的名称然后呢是价格Friend到单位呢就是你们说一下，现在呢我们这个课程信息呀都正常输出了，我们来看一下现在的电结，然后呢放大一下那现在的类结构图啊，非常简单，这个呢是一个接口，这个是一个类，然后这个类实现接口非常清晰，那我们一定要善用idea里边的查看工具，让我们开源码的时候啊，非常有用，那这里边的显示呢会和之前讲的标准的ul的有一点小小的差异，例如这个i就代表他没有用棒棒糖表示法，也没有用监护号，但是呢我们能看出来，那这个呢它的类型ok，那现在的那结构啊非常简单，我们呢也正常输出了这个课程的信息。那么输出完这个课程信息之后啊，那现在呢不可网有活动了，比如说双十一还是呢618要进行一个打折活动，那我们怎么来开发这个需求呢？首先呢回到我们接口，那我们是不是要增加一个钙？Discount cry每个方法呢，ok，假设我们增加了这个方法，比如说这个呢是获取课程的原价，这个呢是获取课程的打折价格，那我们这个JAVA课程的这个类呢需要进行修改了，至少我要实现这个方法ok，那假设呢现在做活动打8折。可以的我们接我们接口呢是不应该经常变化的，他应该是稳定且可靠的，否则呢接口作为契约的这个作用就是失去了，那我们再换一种思路。我这个方法呀切掉k在这里边呢也自己的对的，就这个方式来说，我们获取这个原价，那恢复，那我们为什么最开始是一个接，在这里边呢也是为了演示我们要面向接口编程，然后继续来看我们这个类，这个时候呢我们想一下，我们如果通过扩展再写一个JAVA的子类呢来试一下。文新这一个位JAVA core ok。我这段换一下，他来继承JAVA号。那这个时候呢题是错误的，意思是说了在加COS里边没有默认的不能信，因为我们在这里边的并没有一个无餐的构造器ok，但是呢那个不重要，我们还是以课程的目标为准，ok。那默认idea给他实现呐，真调用父类的构造器，这个呢没有问题，那这里边呢为什么命名JAVA啊？因为它是一个JAVA打折的课程，那如果我们这个折扣非常简单，所有类型的课程呢都统一打折。我们这个命名，不叫JAVA，直接就叫打折的一个课程即可。那这里边呢就衍生一个叫红旗m，我们来重写一个override override什么呢类的方法，那这个呢默认生成的呢是点也就是说要用户类的这个方法啊，那我们这里边呢直接乘以0.8。那如果呢我们要做分期间加jJAVA号，JAVA的折扣课程，那这里边呢？这个原价我们说一下那这个课程那这个课那这个课程价格，售卖价格啊现在直接调用该price拿到的是一折后价，但是呢我们原价没有了，那很简单，我们还是回到这个类里边，我们写一个。Price你这什么呢是是JAVA，但是它的引用了是一个iQOO，所以我们在这里边想获取原价的时候，我们试一下。点ok并没有我们之前声明的price，虽然呢他现在是ok，那我们怎么办呀？很简单，什么bug来看一下，给大家看一长短长短，ok，他名字呢还叫这个。让下边的引用啊能动。把他的改一下就可以了。那这样呢我们就抢转成功了，然后我们这里边呢课程这个呢是折扣价格。前面那我们再加一下。原价还是加盖price ok到前面的加入空格方便呢，我们查看结果。我们转一下好，这个时候呢可以看到ID有了，课程名称有了，原价有了，折后价格也有了，ok，在这里边呢在强调一下啊，我们这个课程的重点呢并不是搞定这个double就是精度的问题。对的，这一块儿忽略就可以了，那解决方案呢，前边我也说过了，ok，那么现在呢来体会一下我们刚刚的这个做法，首先接口没有变。它的实现类也没有变ok，然后呢我们声明了一个主类来继承JAVA考，我们看一下包个小一下，所以呢看到这个箭头曲线呢是实现接口实现的是继承ok，而我们这个子类的构造器是调用的父类的构造器，而下面这个呢就是方法这两个方法，一个是还有呢，返回值是double price。那我们现在的打折销售给开发完工作中都是容易引起bug的而，而我们通过继承了一个积累，简单的一个方式，使我们对于这个扩展呢是开放的，而对修改这个接口和这个鸡肋呢是关闭的，ok，论文变化的呢都是应用层的一个子模块，比如说还有呢新增了就是呗，那因为越低层次的模块儿。基础的模块变化也都也都是开病原者的一个不过这不过这个文件或者呢变的配置方式，而不是去修改spring的源码。地主是二期当中我们通过我们我们后续呢还，不断的加强巩固，那随着我们课程的学习呢，大家对这几个原则呀理解也会越来越深的，那有一些设计模式呢，会和原则有一定冲突那其实就是一个，平衡的，问题，那这个呢到后面碰到我会再详细，说的
 
 ---
 
@@ -108,13 +164,17 @@
 
 创建型模式: 工厂模式
 
-结构型模式
+结构型模式:
 
-行为型模式
+行为型模式: 策略模式
 
 
 
-# 工厂模式
+# 创建型
+
+
+
+## 工厂模式
 
 创建型模式
 
@@ -126,7 +186,7 @@
 
 * 工厂模式根据行为可以分成: 简单工厂, 工厂方法和抽象工厂. 目的都是问了隐藏创建类的细节, 但是实现的理念不同. 简单工厂: 最简单, 使用最广
 
-## 简单工厂
+### 简单工厂
 
 场景: 买苹果, 以前需要了解每个苹果的特性对应的牌子(红色的甜(红富士), 绿色的酸(青果)). 水果商家, client对商家提出我要买什么样子的苹果, 红的甜的, 商家来进行处理
 
@@ -228,7 +288,7 @@ I18N china = I18NFactory.getI18NObject("China");
 
 
 
-##  工厂方法
+###  工厂方法
 
 
 
@@ -236,7 +296,341 @@ I18N china = I18NFactory.getI18NObject("China");
 
 
 
-## 抽象工厂
+### 抽象工厂
+
+
+
+
+
+
+
+
+
+
+
+# 结构型
+
+
+
+
+
+
+
+
+
+# 行为型
+
+
+
+## 策略模式
+
+### 定义与类型
+
+定义: 定义了算法家族, 分别封装起来, 让它们之间可以互相替换, 此模式让算法的变化不会影响到使用算法的用户.
+
+类型: 行为型
+
+也就是不同的算法封装到不同的类, 相互之间可以替换.
+
+实际应用: 田忌赛马, 怎么去赛马就是策略. 还有促销满减, 返现等也都是促销的策略
+
+实际的应用: 可以大范围的处理掉if Else. 也就是说如果每个方法里面有大量的if else或者if else if, 可以通过策略模式给他们消除掉
+
+### 适用场景
+
+* 系统有很多类, 而他们的区别呢仅仅在于他们的行为不同. 
+  * 使用策略模式可以动态的让一个对象在许多行为中选择一种行为, 也就是说这个对象不同的行为放到不同的类中, 它有很多行为类, 而每一个行为呢对应每一种策略
+
+* 一个系统需要动态的在几种算法中选择一种
+  * 这里边所说的算法就是策略, 因为策略中封装的就是一系列业务逻辑和计算方式. 比如说两个数字, 通过加法策略就把两个数字加到一块, 通过减法策略就做减法.
+
+### 优缺点
+
+#### 优点
+
+* 满足开闭原则
+  * 可以不修改原有系统的基础上选择具体的行为. 这种行为我们也可以扩展. 这里的"行为"例如上面的加减乘除的算法
+
+* 避免使用多重条件转移语句(if...else, switch等). 把具体的策略行为分离成一个一个单独的类替换ifelse中的逻辑. 降低代码耦合
+
+* 提高算法的保密性和安全性, 只知道这个策略是干嘛的, 不需要了解这个策略里边的内部实现
+  * 封装了一个促销的服务, 对外提供不同的策略. 客户端在使用的时候只需要使用double的接口, 而具体的策略实现的是放到这个double的provider上.
+  * 在具体的策略类中, 封装了不同的行为和算法以及的相关的数据结构, 对于客户端来说是不需要客端知道里面的内容
+
+#### 缺点
+
+* 客户端必须知道所有的策略类, 并自行决定使用哪一个策略类。
+* 产生很多的策略类
+  * 把不同的策略封装到一个方法里面, 通过大量的ifelse来判断, 都写在一个类里面. 如果拆出来一个类一个行为, 一个类一个策略. 会产生很多的策略实现类
+
+### 相关设计模式
+
+#### 策略模式和工厂模式
+
+工厂模式包含扩展方法以及抽象工厂, 工厂模式是创建型的设计模式, 策略模式是行为型的.
+
+也就是说工厂模式接收指令, 创建出符合要求的具体对象. -> 策略模式接受已经创建好的对象, 从而实现不同的行为.
+
+#### 策略模式和状态模式
+
+他们有什么相关性与区别？
+
+在使用策略模式的时候, 客户端需要知道到底选择哪一个策略, 而我们在使用状态模式的时候, 客户端不需要关心具体的状态, 这些状态会自动转换.
+
+总结来说, 如果系统中某个类的对象存在多种态, 那在不同状态下的行为有差异的话, (例如: lol中有buff会浪, 没buff就稳.), 而且这些状态可以发生转换时, 可以使用状态模式. 
+
+那如果系统中某个类的行为存在多种实现方式, 如说618和双十一的促销不同策略, 促销是一个行为, 而这一行为有多种实现方式, 这种情况下我们就要使用策略模式.
+
+### coding
+
+#### 初级策略模式
+
+促销活动, 促销是课程的一个行为促销行为, 这个促销行为有多种实现.
+
+首先创建一个促销策略接口PromotionStrategy
+
+```java
+public interface PromotionStrategy {
+    void doPromotion();
+}
+```
+
+然后创建具体的实现类, 表示不同的促销策略: 满减(ManJianPromotionStrategy), 返现(FanXianPromotionStrategy), 立减(LiJianPromotionStrategy)
+
+```java
+public class ManJianPromotionStrategy implements PromotionStrategy{
+    @Override
+    public void doPromotion() {
+        System.out.println("满减促销,满200-20元");
+    }
+}
+```
+
+```java
+public class LiJianPromotionStrategy implements PromotionStrategy {
+    @Override
+    public void doPromotion() {
+        System.out.println("立减促销,课程的价格直接减去配置的价格");
+    }
+}
+```
+
+```java
+public class FanXianPromotionStrategy implements PromotionStrategy{
+    @Override
+    public void doPromotion() {
+        System.out.println("返现促销,返回的金额存放到慕课网用户的余额中");
+    }
+}
+```
+
+```java
+public class DefaultPromotionStrategy implements PromotionStrategy {
+    @Override
+    public void doPromotion() {
+        System.out.println("默认促销策略");
+    }
+}
+```
+
+
+
+然后包装一下这个策略, 新建类PromotionActivity, 促销活动类, 其中有具体的行为执行具体的促销策略executePromotionStrategy. 构造器注入
+
+```java
+public class PromotionActivity {
+    private PromotionStrategy promotionStrategy;
+    
+    public PromotionActivity(PromotionStrategy promotionStrategy) {
+        this.promotionStrategy = promotionStrategy;
+    }
+    public void executePromotionStrategy(){
+        promotionStrategy.doPromotion();
+    }
+}
+```
+
+查看UML图
+
+![image-20220717224740600](img/design-pattern/image-20220717224740600.png)
+
+三个策略实现. 促销活动中包含了促销策略(PromotionStrategy), 一个促销活动(PromotionActivity)中包含了一个促销策略(PromotionStrategy) , 促销活动(PromotionActivity)还可以作为课程类的成员变量, 课程活动具体使用哪个促销策略的关系就都建立了. 这里不创建课程类. 
+
+---
+
+接下来写测试类, 最简单的模式
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        PromotionActivity promotionActivity618 = new PromotionActivity(new LiJianPromotionStrategy());
+        PromotionActivity promotionActivity1111 = new PromotionActivity(new FanXianPromotionStrategy());
+
+        promotionActivity618.executePromotionStrategy();
+        promotionActivity1111.executePromotionStrategy();
+    }
+}
+```
+
+通过应用层的代码我们可以看出来最后两行是不需要变化的, 唯一的点是应用层在不同的促销阶段选择不同的促销策略即可, 其他的都不用动. 如果要新增策略, 就实现接口去实现, 再去调用就可以了, 扩展性好, 使用简单, 如果不使用策略模式, 就要进行各种的判断, 这里判断的实现就是把现在不同的策略里边的实现拿过来放到里面形成一个比较大的一个方法, 实际的业务当中肯定不是一行, 就会导致某一个方法里面的代码多, 方法过大, 不利于以后的维护与扩展.
+
+策略模式的初级应用, 每次调用的时候都要new一个促销活动以及对应的促销策略.
+
+#### 简单策略模式
+
+修改代码如下
+
+```java
+public class Test {
+    /**
+     * 单策略模式, 还是无法消除ifelse -> 策略模式 + 工厂模式
+     */
+    public static void main(String[] args) {
+        PromotionActivity promotionActivity = null;
+        String promotionKey = "lijian";
+        if ("lijian".equalsIgnoreCase(promotionKey)) {
+            promotionActivity = new PromotionActivity(new LiJianPromotionStrategy());
+        } else if ("fanxian".equalsIgnoreCase(promotionKey)) {
+            promotionActivity = new PromotionActivity(new FanXianPromotionStrategy());
+        }// ....
+        promotionActivity.executePromotionStrategy();
+    }
+}
+```
+
+业务代码执行到这里面, 每次都需要new一个促销活动和促销策略, 其实现在策略的实现方式是线程安全的, 也就是说**业务代码中并没有使用堆的内存变量**, 
+
+所以不需要重复创建, -> 使用工厂模式
+
+#### 工厂模式+策略模式
+
+**业务代码中并没有使用堆的内存变量**, 就不需要重复new创建, 使用工厂模式
+
+首先创建促销策略工厂PromotionStrategyFactory
+
+```java
+public class PromotionStrategyFactory {
+    private static Map<String, PromotionStrategy> PROMOTION_STRATEGY_MAP = new HashMap<>();
+    
+    static {
+        PROMOTION_STRATEGY_MAP.put(PromotionKey.lijian, new LiJianPromotionStrategy());
+        PROMOTION_STRATEGY_MAP.put(PromotionKey.fanxian, new FanXianPromotionStrategy());
+        PROMOTION_STRATEGY_MAP.put(PromotionKey.cuxiao, new ManJianPromotionStrategy());
+    }
+
+    private PromotionStrategyFactory() {
+    }
+
+    private static final PromotionStrategy DEFAULT_PROMOTION = new DefaultPromotionStrategy();
+
+    public static PromotionStrategy getPromotion(String promotionKey) {
+        PromotionStrategy promotionStrategy = PROMOTION_STRATEGY_MAP.get(promotionKey);
+        // return promotionStrategy == new DefaultPromotionStrategy() ? null : promotionStrategy;
+         return promotionStrategy == null ? DEFAULT_PROMOTION : promotionStrategy;
+    }
+
+    /**
+     * 声明常量的时候, 逻辑分组的作用
+     */
+    private interface PromotionKey {
+        final String lijian = "lijian";
+        String fanxian = "fanxian";
+        String cuxiao = "cuxiao";
+    }
+}
+```
+
+* map放PromotionKey和具体PromotionStrategy的键值对
+* 在static块中填充map
+* 不希望工厂本身被new出来, 把构造器改成private, 开发给外部的应该是获取营销策略方法
+* 获取营销策略方法getPromotion, 为了让调用更加友好, 不返回null, 防止出现NPE, 返回默认的促销策略DefaultPromotionStrategy. 如果为空, 每次new DefaultPromotionStrategy()又重复创建, 还是声明成static常量即可
+
+* interface PromotionKey, 声明常量的时候, 起到逻辑分组的作用. 默认就是final, 不可更改
+
+* 如果不想在类加载的时候加载map, 也可以使用享元模式(Flyweight Pattern), 当然这里没有必要
+
+回到Test中
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        String promotionKey = "lijian";
+        PromotionActivity promotionActivity = new PromotionActivity(PromotionStrategyFactory.getPromotion(promotionKey));
+        promotionActivity.executePromotionStrategy();
+    }
+}
+```
+
+通过工厂和策略模式的组合使用, 将ifelse的逻辑删除掉了
+
+所以策略模式并不是单独使用的, 可能要结合单例, 工厂, 享元.
+
+如果在项目当中碰到大量的ifelse, 可以考虑是否可以抽象这个对象以及他的行为来把他封装成一个策略模式. 或者是说个对象的行为经常的要变化, 扩展性的要求比较高, 这种时候也可以考虑一下策略模式
+
+### 源码解析
+
+#### Comparator
+
+首先查看比较器Comparator的源码, 在很多集合框架中自己实现了比较器
+
+<img src="img/design-pattern/image-20220721201546336.png" alt="image-20220721201546336" style="zoom:80%;" />
+
+比较器在具体的业务当中, 根据业务需要来实现, 这个比较器就是一个策略, 提供两个接口compare和equals, 所有策略都需要实现这两个方法, 这个Compartor就是抽象的策略, 上图的实现就是具体的策略
+
+以Arrays的sort为例, 传入自己的比较器, 实现自己的比较逻辑
+
+```java
+public static <T> void sort(T[] a, Comparator<? super T> c) {
+    if (c == null) {
+        sort(a);
+    } else {
+        if (LegacyMergeSort.userRequested)
+            legacyMergeSort(a, c);
+        else
+            TimSort.sort(a, 0, a.length, c, null, 0, 0);
+    }
+}
+```
+
+TreeMap中的比较器对象, 就类似上面促销活动中的促销对象, treemap中的compare方法就是对Comparable比较器的加工
+
+```java
+public class TreeMap<K,V>
+    extends AbstractMap<K,V>
+    implements NavigableMap<K,V>, Cloneable, java.io.Serializable
+{
+    /**
+     * The comparator used to maintain order in this tree map, or
+     * null if it uses the natural ordering of its keys.
+     *
+     * @serial
+     */
+    private final Comparator<? super K> comparator;
+    ...
+}
+```
+
+#### Spring中Resource
+
+Spring(org.springframework.core.io)下的Resource和他的实现类
+
+<img src="img/design-pattern/image-20220721202549863.png" alt="image-20220721202549863" style="zoom: 50%;" />
+
+Spring通过Resource接口提供资源访问, Resource可以理解成策略的抽象, 对于Resource来说是同一个对象, 但是行为可以有多种, 截图中都是访问Resource的具体行为
+
+#### InstantiationStrategy
+
+Spring中Bean的初始化也使用了策略模式, 初始化的策略接口, 方法都是策略相关, 两种实现
+
+![image-20220721202941306](img/design-pattern/image-20220721202941306.png)
+
+查看其中的SimpleInstantiationStrategy就是具体的策略实现类
+
+对于bean来说, 对象初始化有两种策略方式, 一种是简单的初始化策略, 还有一种是cglib子类的初始化策略
+
+这里的Cglib子类又继承了SimpleInstantiationStrategy, 也会实现初始化策略接口
+
+策略和策略之间可以存在继承关系, 主要看业务场景的使用, 同一个level的策略还是继承的策略
 
 
 
@@ -360,269 +754,6 @@ I18N china = I18NFactory.getI18NObject("China");
 
 
 
-# 策略模式
-
-## 定义与类型
-
-定义: 定义了算法家族, 分别封装起来, 让它们之间可以互相替换, 此模式让算法的变化不会影响到使用算法的用户.
-
-类型: 行为型
-
-也就是不同的算法封装到不同的类, 相互之间可以替换.
-
-实际应用: 田忌赛马, 怎么去赛马就是策略. 还有促销满减, 返现等也都是促销的策略
-
-实际的应用: 可以大范围的处理掉if Else. 也就是说如果每个方法里面有大量的if else或者if else if, 可以通过策略模式给他们消除掉
-
-## 适用场景
-
-* 系统有很多类, 而他们的区别呢仅仅在于他们的行为不同. 
-  * 使用策略模式可以动态的让一个对象在许多行为中选择一种行为, 也就是说这个对象不同的行为放到不同的类中, 它有很多行为类, 而每一个行为呢对应每一种策略
-
-* 一个系统需要动态的在几种算法中选择一种
-  * 这里边所说的算法就是策略, 因为策略中封装的就是一系列业务逻辑和计算方式. 比如说两个数字, 通过加法策略就把两个数字加到一块, 通过减法策略就做减法.
-
-## 优缺点
-
-### 优点
-
-* 满足开闭原则
-  * 可以不修改原有系统的基础上选择具体的行为. 这种行为我们也可以扩展. 这里的"行为"例如上面的加减乘除的算法
-
-* 避免使用多重条件转移语句(if...else, switch等). 把具体的策略行为分离成一个一个单独的类替换ifelse中的逻辑. 降低代码耦合
-
-* 提高算法的保密性和安全性, 只知道这个策略是干嘛的, 不需要了解这个策略里边的内部实现
-  * 封装了一个促销的服务, 对外提供不同的策略. 客户端在使用的时候只需要使用double的接口, 而具体的策略实现的是放到这个double的provider上.
-  * 在具体的策略类中, 封装了不同的行为和算法以及的相关的数据结构, 对于客户端来说是不需要客端知道里面的内容
-
-### 缺点
-
-* 客户端必须知道所有的策略类, 并自行决定使用哪一个策略类。
-* 产生很多的策略类
-  * 把不同的策略封装到一个方法里面, 通过大量的ifelse来判断, 都写在一个类里面. 如果拆出来一个类一个行为, 一个类一个策略. 会产生很多的策略实现类
-
-## 相关设计模式
-
-### 策略模式和工厂模式
-
-工厂模式包含扩展方法以及抽象工厂, 工厂模式是创建型的设计模式, 策略模式是行为型的.
-
-也就是说工厂模式接收指令, 创建出符合要求的具体对象. -> 策略模式接受已经创建好的对象, 从而实现不同的行为.
-
-### 策略模式和状态模式
-
-他们有什么相关性与区别？
-
-在使用策略模式的时候, 客户端需要知道到底选择哪一个策略, 而我们在使用状态模式的时候, 客户端不需要关心具体的状态, 这些状态会自动转换.
-
-总结来说, 如果系统中某个类的对象存在多种态, 那在不同状态下的行为有差异的话, (例如: lol中有buff会浪, 没buff就稳.), 而且这些状态可以发生转换时, 可以使用状态模式. 
-
-那如果系统中某个类的行为存在多种实现方式, 如说618和双十一的促销不同策略, 促销是一个行为, 而这一行为有多种实现方式, 这种情况下我们就要使用策略模式.
-
-## coding
-
-### 初级策略模式
-
-促销活动, 促销是课程的一个行为促销行为, 这个促销行为有多种实现.
-
-首先创建一个促销策略接口PromotionStrategy
-
-```java
-public interface PromotionStrategy {
-    void doPromotion();
-}
-```
-
-然后创建具体的实现类, 表示不同的促销策略: 满减(ManJianPromotionStrategy), 返现(FanXianPromotionStrategy), 立减(LiJianPromotionStrategy)
-
-```java
-public class ManJianPromotionStrategy implements PromotionStrategy{
-    @Override
-    public void doPromotion() {
-        System.out.println("满减促销,满200-20元");
-    }
-}
-```
-
-```java
-public class LiJianPromotionStrategy implements PromotionStrategy {
-    @Override
-    public void doPromotion() {
-        System.out.println("立减促销,课程的价格直接减去配置的价格");
-    }
-}
-```
-
-```java
-public class FanXianPromotionStrategy implements PromotionStrategy{
-    @Override
-    public void doPromotion() {
-        System.out.println("返现促销,返回的金额存放到慕课网用户的余额中");
-    }
-}
-```
-
-```java
-public class DefaultPromotionStrategy implements PromotionStrategy {
-    @Override
-    public void doPromotion() {
-        System.out.println("默认促销策略");
-    }
-}
-```
-
-
-
-然后包装一下这个策略, 新建类PromotionActivity, 促销活动类, 其中有具体的行为执行具体的促销策略executePromotionStrategy. 构造器注入
-
-```java
-public class PromotionActivity {
-    private PromotionStrategy promotionStrategy;
-    
-    public PromotionActivity(PromotionStrategy promotionStrategy) {
-        this.promotionStrategy = promotionStrategy;
-    }
-    public void executePromotionStrategy(){
-        promotionStrategy.doPromotion();
-    }
-}
-```
-
-查看UML图
-
-![image-20220717224740600](img/design-pattern/image-20220717224740600.png)
-
-三个策略实现. 促销活动中包含了促销策略(PromotionStrategy), 一个促销活动(PromotionActivity)中包含了一个促销策略(PromotionStrategy) , 促销活动(PromotionActivity)还可以作为课程类的成员变量, 课程活动具体使用哪个促销策略的关系就都建立了. 这里不创建课程类. 
-
----
-
-接下来写测试类, 最简单的模式
-
-```java
-public class Test {
-    public static void main(String[] args) {
-        PromotionActivity promotionActivity618 = new PromotionActivity(new LiJianPromotionStrategy());
-        PromotionActivity promotionActivity1111 = new PromotionActivity(new FanXianPromotionStrategy());
-
-        promotionActivity618.executePromotionStrategy();
-        promotionActivity1111.executePromotionStrategy();
-    }
-}
-```
-
-通过应用层的代码我们可以看出来最后两行是不需要变化的, 唯一的点是应用层在不同的促销阶段选择不同的促销策略即可, 其他的都不用动. 如果要新增策略, 就实现接口去实现, 再去调用就可以了, 扩展性好, 使用简单, 如果不使用策略模式, 就要进行各种的判断, 这里判断的实现就是把现在不同的策略里边的实现拿过来放到里面形成一个比较大的一个方法, 实际的业务当中肯定不是一行, 就会导致某一个方法里面的代码多, 方法过大, 不利于以后的维护与扩展.
-
-策略模式的初级应用, 每次调用的时候都要new一个促销活动以及对应的促销策略.
-
-### 简单策略模式
-
-修改代码如下
-
-```java
-public class Test {
-    /**
-     * 单策略模式, 还是无法消除ifelse -> 策略模式 + 工厂模式
-     */
-    public static void main(String[] args) {
-        PromotionActivity promotionActivity = null;
-        String promotionKey = "lijian";
-        if ("lijian".equalsIgnoreCase(promotionKey)) {
-            promotionActivity = new PromotionActivity(new LiJianPromotionStrategy());
-        } else if ("fanxian".equalsIgnoreCase(promotionKey)) {
-            promotionActivity = new PromotionActivity(new FanXianPromotionStrategy());
-        }// ....
-        promotionActivity.executePromotionStrategy();
-    }
-}
-```
-
-业务代码执行到这里面, 每次都需要new一个促销活动和促销策略, 其实现在策略的实现方式是线程安全的, 也就是说**业务代码中并没有使用堆的内存变量**, 
-
-所以不需要重复创建, -> 使用工厂模式
-
-### 工厂模式+策略模式
-
-**业务代码中并没有使用堆的内存变量**, 就不需要重复new创建, 使用工厂模式
-
-首先创建促销策略工厂PromotionStrategyFactory
-
-```java
-public class PromotionStrategyFactory {
-    private static Map<String, PromotionStrategy> PROMOTION_STRATEGY_MAP = new HashMap<>();
-    
-    static {
-        PROMOTION_STRATEGY_MAP.put(PromotionKey.lijian, new LiJianPromotionStrategy());
-        PROMOTION_STRATEGY_MAP.put(PromotionKey.fanxian, new FanXianPromotionStrategy());
-        PROMOTION_STRATEGY_MAP.put(PromotionKey.cuxiao, new ManJianPromotionStrategy());
-    }
-
-    private PromotionStrategyFactory() {
-    }
-
-    private static final PromotionStrategy DEFAULT_PROMOTION = new DefaultPromotionStrategy();
-
-    public static PromotionStrategy getPromotion(String promotionKey) {
-        PromotionStrategy promotionStrategy = PROMOTION_STRATEGY_MAP.get(promotionKey);
-        // return promotionStrategy == new DefaultPromotionStrategy() ? null : promotionStrategy;
-         return promotionStrategy == null ? DEFAULT_PROMOTION : promotionStrategy;
-    }
-
-    /**
-     * 声明常量的时候, 逻辑分组的作用
-     */
-    private interface PromotionKey {
-        final String lijian = "lijian";
-        String fanxian = "fanxian";
-        String cuxiao = "cuxiao";
-    }
-}
-```
-
-* map放PromotionKey和具体PromotionStrategy的键值对
-* 在static块中填充map
-* 不希望工厂本身被new出来, 把构造器改成private, 开发给外部的应该是获取营销策略方法
-* 获取营销策略方法getPromotion, 为了让调用更加友好, 不返回null, 防止出现NPE, 返回默认的促销策略DefaultPromotionStrategy. 如果为空, 每次new DefaultPromotionStrategy()又重复创建, 还是声明成static常量即可
-
-* interface PromotionKey, 声明常量的时候, 起到逻辑分组的作用. 默认就是final, 不可更改
-
-* 如果不想在类加载的时候加载map, 也可以使用享元模式(Flyweight Pattern), 当然这里没有必要
-
-回到Test中
-
-```java
-public class Test {
-    public static void main(String[] args) {
-        String promotionKey = "lijian";
-        PromotionActivity promotionActivity = new PromotionActivity(PromotionStrategyFactory.getPromotion(promotionKey));
-        promotionActivity.executePromotionStrategy();
-    }
-}
-```
-
-通过工厂和策略模式的组合使用, 将ifelse的逻辑删除掉了
-
-所以策略模式并不是单独使用的, 可能要结合单例, 工厂, 享元.
-
-如果在项目当中碰到大量的ifelse, 可以考虑是否可以抽象这个对象以及他的行为来把他封装成一个策略模式. 或者是说个对象的行为经常的要变化, 扩展性的要求比较高, 这种时候也可以考虑一下策略模式
-
-## 源码解析
-
-
-
-
-
-
-
----
-
-19-3
-
-这JAVA的原生提供的在JAVA有qo包下呢是一个比较器，那在加了很多集合框架当中啊，我们需要传入一个比较近，而这个比较近的默认的有很多实现。我们也可以自己实现，我们想要的比较气，比如说我们按下ctrl加t可以看到无论是在瓜瓦当中还是呢spring当中还有呢发型当中，比如说这里边它自己实现了一个布尔类型的比较，下面还有很多。都可以自己来比较器，那我们在具体的业务场景来说，比如说他可能包括价格评分，购买人数，浏览量等等同的因子都是有不同的权重，然后呢加到一块儿算一个总分，那我说的呢是一个比较简单的排序啊，是用这个比较器来实现，当然了实际过程当中啊可能会使用es来实现这个排序，只不过呢也就是说比较气在具体的业务当中还是要根据业务来写自己的一个实，那这个比较器呢就是一个策略，例如呢他提供我们拍这个接口，还有呢echo所有的策略呢都要实现这两个方法。那这个比较细，就相当于一个抽象的策略，这些呢都是具体的策略，那刚刚也说我们经常呢要把这个比较器传入过去，传入到哪里呢？我们看一个arrays。这个类呢需要办美，经常来用，比如说这里边呢最常用的salts。最下边我们看一下这个，这个呢是一个排序，然后呢参数就一个比较器，也就是说我们实现了一个自己的比较器啊，可以传入过来，然后呢就会按照我们所实现的比较逻辑来进行排序，在这个方法实践里面呢把这个比较器啊继续往下传，ok。那这些呢就是策略模式在阶梯中的典型应用，那么再看一个类催慢。这个呢会更形象一，例如刚刚的我们促销活动里边呀，有一个促销策略对象，而在map里边呀就有这个比较器对象，而催麦粉里边的具体的compare。这么一个实现的，我们可以看一下，对比较器呢又进行了一些应用和加工，ok，非常容易理解，那这个呢也是策略模式在jk中的典型应用，那么再看一个spring当中的对上注意这个包啊，选择spring framework下边的。这个啊小伙伴们可能不经常用，但是它的时间内我们可能经常用，比如说这里边呢有一个class pass，还有呢文件。Five还有呢url等等各种也就是说spring呢通过resource这么一个接口提供了资源访问，而这个resource就可以理解成是一个策略的抽象，那于来说他呢是同一个对象，但是访问resource的行为有很多种，所以呢这下边都是访问resource的一个具体策略行为。那我们来看一下它的主要接口，比如说是否存在呀？是否可读啊，还有呢获取它的url，获取它的UI获取的，那我们平时在主函数中或者呢写试的时候，经常啊通过main来加载spring的容器，这里面呢就要使用的具体的这个resource的具体策略实现类，他在spring当中避免的初始化也使用了策略模式，那就是这个类。Strategy通过名字的我就看出来，他呢是一个初始化的策略接口里面呢有几个方法都是围绕初始化相关的，那么再看一下它的实现有哪些呢？有两种，一个是简单的初始化。策略还有呢cg lip子类的初始化策略，我们打开简单的初始化策略来看一下，那在这里面呢就实现了刚刚在接口中声明个初始，并且呢又增加了这两个可以看到，那这个类呢就是具体的策略实现类，比如说，对于病人来说，这个对象可以初始化，初始化呢把它定成一个策略，而有两种策略方式，一种呢是简单的初始化策略，还有一种呢是cp子类的初始化策略，那么还可以看一下它具体的应用。比如说这个接口呢在哪里使用了呢？可以看到在抽象的这个中就使用了这个策略作为返回值，那有兴趣的要办的可以进来仔细看一下，这里面呢还要说一下这个简单的初始化策略类，它呢还是cd lib的父类，我们看一下，也就是这里CD lib子类的。初始化策略呢又继承了简单的初始化策略，那它继承了简单初始化策略，也就代表着cp这个类的，它也会实现这个初始化策略接口ok，那这里面呢就展示了另外一种实现策略和策略之间可以存在一个继承Ok，那这个呢还是要根据我们实际的业务场景来选择性的应用，例如我们刚刚一起的场景啊，那些策略之间处于同一个level，而在spring源码当中，这个初始化策略下边两个策略之间就存在继承关系ok，那刚刚那些呢就是策略模式在jk和当中的一些应用，希望呢需要办满，能理解透，掌握好，ok。
-
-
-
-
-
 #  解释器模式
 
 
@@ -670,6 +801,10 @@ public class Test {
 
 
 # 状态模式
+
+
+
+
 
 
 

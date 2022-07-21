@@ -1,4 +1,4 @@
-package imocc.behavioral.strategy;
+package imooc.behavioral.strategy;
 
 
 public class FanXianPromotionStrategy implements PromotionStrategy{
