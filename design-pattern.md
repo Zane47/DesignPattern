@@ -118,7 +118,7 @@ public class Test {
 
 查看uml图
 
-<img src="img/design-pattern/image-20220721204948514.png" alt="image-20220721204948514" style="zoom:50%;" />
+<img src="asset/img/design-pattern/image-20220721204948514.png" alt="image-20220721204948514" style="zoom:50%;" />
 
 新增打折课程需求
 
@@ -389,13 +389,13 @@ ICourse iCourse = new JavaDiscountCourse();
 
 场景: 买苹果, 以前需要了解每个苹果的特性对应的牌子(红色的甜(红富士), 绿色的酸(青果)). 水果商家, client对商家提出我要买什么样子的苹果, 红的甜的, 商家来进行处理
 
-<img src="img/design-pattern/image-20211229220618935.png" alt="image-20211229220618935" style="zoom:50%;" />
+<img src="asset/img/design-pattern/image-20211229220618935.png" alt="image-20211229220618935" style="zoom:50%;" />
 
 以前每个Client都需要了解每个具体类的情况
 
 但是引入工厂后, 根据Client的要求, 由工厂类创建就可以了, 
 
-<img src="img/DesignPattern/image-20211229220711760.png" alt="image-20211229220711760" style="zoom:67%;" />
+<img src="asset/img/DesignPattern/image-20211229220711760.png" alt="image-20211229220711760" style="zoom:67%;" />
 
 对于原始的具体类, 因为都是相似的, 所有抽象出来一个具体的接口, 再创建一个工厂类, 根据客户的要求(传入的参数), 由工厂类来自动创建对应的实现类, 返回适合的对象. 客户类不再面向具体的实现类, 而是持有抽象的接口. 因为每个类都实现了这个接口, 工厂类返回的时候返回的也是接口, 而不是实现类. 对于Client来说, 不需要关注工厂类创建了哪个具体类, 只需要知道工厂类返回了某一个接口即可.
 
@@ -797,7 +797,7 @@ public class Test {
 
 首先查看比较器Comparator的源码, 在很多集合框架中自己实现了比较器
 
-<img src="img/design-pattern/image-20220721201546336.png" alt="image-20220721201546336" style="zoom:80%;" />
+<img src="asset/img/design-pattern/image-20220721201546336.png" alt="image-20220721201546336" style="zoom:80%;" />
 
 比较器在具体的业务当中, 根据业务需要来实现, 这个比较器就是一个策略, 提供两个接口compare和equals, 所有策略都需要实现这两个方法, 这个Compartor就是抽象的策略, 上图的实现就是具体的策略
 
@@ -846,7 +846,7 @@ Spring通过Resource接口提供资源访问, Resource可以理解成策略的�
 
 Spring中Bean的初始化也使用了策略模式, 初始化的策略接口, 方法都是策略相关, 两种实现
 
-![image-20220721202941306](img/design-pattern/image-20220721202941306.png)
+![image-20220721202941306](asset/img/design-pattern/image-20220721202941306.png)
 
 查看其中的SimpleInstantiationStrategy就是具体的策略实现类
 
