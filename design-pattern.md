@@ -884,7 +884,7 @@ public class TreeMap<K,V>
 
 Spring(org.springframework.core.io)下的Resource和他的实现类
 
-<img src="img/design-pattern/image-20220721202549863.png" alt="image-20220721202549863" style="zoom: 50%;" />
+<img src="asset/img/design-pattern/image-20220721202549863.png" alt="image-20220721202549863" style="zoom: 50%;" />
 
 Spring通过Resource接口提供资源访问, Resource可以理解成策略的抽象, 对于Resource来说是同一个对象, 但是行为可以有多种, 截图中都是访问Resource的具体行为
 
