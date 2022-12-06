@@ -722,7 +722,7 @@ public class PromotionActivity {
 
 查看UML图
 
-![image-20220717224740600](img/design-pattern/image-20220717224740600.png)
+![image-20220717224740600](asset/img/design-pattern/image-20220717224740600.png)
 
 三个策略实现. 促销活动中包含了促销策略(PromotionStrategy), 一个促销活动(PromotionActivity)中包含了一个促销策略(PromotionStrategy) , 促销活动(PromotionActivity)还可以作为课程类的成员变量, 课程活动具体使用哪个促销策略的关系就都建立了. 这里不创建课程类. 
 
